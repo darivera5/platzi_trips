@@ -74,3 +74,13 @@ flutter:
   #
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
+  assets:
+    - assets/img/43397557.jpeg
+    - assets/img/jairoVarela.jpg
+    - assets/img/jovita.jpeg
+    - assets/img/nose.jpeg
+
+  fonts:
+    - family: Lato
+      fonts: 
+        - asset: fonts/Lato-Regular.ttf
