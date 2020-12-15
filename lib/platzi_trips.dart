@@ -1,58 +1,67 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/rendering.dart';
-import 'home_trips.dart';
-import 'profile.dart';
-import 'search_trips.dart';
+import 'package:platzi_trips/Places/ui/screens/home_trips.dart';
+import 'package:platzi_trips/Places/ui/screens/search_trips.dart';
+import 'User/ui/screens/profile_trips.dart';
 
 class PlatziTrips extends StatefulWidget {
   @override
-  _PlatziTripsState createState() => _PlatziTripsState();
-}
-
-class _PlatziTripsState extends State<PlatziTrips> {
-  int indexTap = 0;
-
-  void onTapTapped(int index) {
-    setState(() {
-      indexTap = index;
-    });
+  State<StatefulWidget> createState() {
+    // TODO: implement createState
+    return _PlatziTrips();
   }
 
+}
+
+class _PlatziTrips extends State<PlatziTrips> {
+  int indexTap = 0;
   final List<Widget> widgetsChildren = [
     HomeTrips(),
     SearchTrips(),
-    Profile(),
+    ProfileTrips()
   ];
+
+  void onTapTapped(int index){
+
+    setState(() {
+      indexTap = index;
+    });
+
+  }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    // TODO: implement build
+
+
+    return
+
+      Scaffold(
       body: widgetsChildren[indexTap],
-      //body: DescriptionPlace("Bahamas", 4, descriptionDummy),
       bottomNavigationBar: Theme(
         data: Theme.of(context).copyWith(
           canvasColor: Colors.white,
-          primaryColor: Colors.purple,
+          primaryColor: Colors.purple
         ),
         child: BottomNavigationBar(
           onTap: onTapTapped,
           currentIndex: indexTap,
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text(""),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.search),
-              title: Text(""),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.person),
-              title: Text(""),
-            ),
-          ],
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                title: Text("")
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.search),
+                  title: Text("")
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person),
+                  title: Text("")
+              ),
+            ]
         ),
       ),
     );
   }
+
 }

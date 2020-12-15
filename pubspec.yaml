@@ -23,11 +23,15 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-
-
+    
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.0
+  generic_bloc_provider: ^1.0.9
+  firebase_auth:
+  google_sign_in:
+  firebase_storage: ^2.1.0
+  cloud_firestore: ^0.9.13
 
 dev_dependencies:
   flutter_test:
@@ -75,10 +79,15 @@ flutter:
   # For details regarding fonts from package dependencies,
   # see https://flutter.dev/custom-fonts/#from-packages
   assets:
-    - assets/img/43397557.jpeg
-    - assets/img/jairoVarela.jpg
-    - assets/img/jovita.jpeg
-    - assets/img/nose.jpeg
+    - assets/img/ann.jpg
+    - assets/img/beach_palm.jpeg
+    - assets/img/beach.jpeg
+    - assets/img/girl.jpg
+    - assets/img/mountain_stars.jpeg
+    - assets/img/mountain.jpeg
+    - assets/img/people.jpg
+    - assets/img/river.jpeg
+    - assets/img/sunset.jpeg
 
   fonts:
     - family: Lato

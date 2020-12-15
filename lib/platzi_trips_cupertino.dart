@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'home_trips.dart';
-import 'search_trips.dart';
-import 'profile.dart';
+import 'package:platzi_trips/Places/ui/screens/home_trips.dart';
+import 'package:platzi_trips/Places/ui/screens/search_trips.dart';
+import 'User/ui/screens/profile_trips.dart';
 
 class PlatziTripsCupertino extends StatelessWidget {
   @override
@@ -10,20 +10,23 @@ class PlatziTripsCupertino extends StatelessWidget {
     // TODO: implement build
     return Scaffold(
       bottomNavigationBar: CupertinoTabScaffold(
-        
         tabBar: CupertinoTabBar(
-          backgroundColor: Color(0x33FFFFFF),
-          items: [
-            BottomNavigationBarItem(
-                icon: Icon(Icons.home, color: Colors.indigo), title: Text("")),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.search, color: Colors.indigo),
-                title: Text("")),
-            BottomNavigationBarItem(
-                icon: Icon(Icons.person, color: Colors.indigo),
-                title: Text("")),
-          ],
+            items: [
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.home, color: Colors.indigo),
+                  title: Text("")
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.search, color: Colors.indigo),
+                  title: Text("")
+              ),
+              BottomNavigationBarItem(
+                  icon: Icon(Icons.person, color: Colors.indigo),
+                  title: Text("")
+              ),
+            ]
         ),
+
         tabBuilder: (BuildContext context, int index) {
           switch (index) {
             case 0:
@@ -38,12 +41,15 @@ class PlatziTripsCupertino extends StatelessWidget {
               break;
             case 2:
               return CupertinoTabView(
-                builder: (BuildContext context) => Profile(),
+                builder: (BuildContext context) => ProfileTrips(),
               );
               break;
+
           }
+
         },
       ),
     );
   }
+
 }
